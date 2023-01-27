@@ -13,6 +13,7 @@ export const StyledActivityIndicator = styled.ActivityIndicator`
 `;
 
 export const ContainerItem = styled.TouchableHighlight`
+  margin-top: 10px;
   margin-bottom: 10px;
 `;
 
@@ -28,13 +29,13 @@ export const TextsView = styled.View`
 `;
 
 export const TextTitle = styled.Text`
-  width: 280;
+  width: 280px;
   font-size: 18px;
   align-self: flex-start;
 `;
 
 export const TextPrice = styled.Text`
-  width: 100;
+  width: 100px;
   font-size: 18px;
 `;
 

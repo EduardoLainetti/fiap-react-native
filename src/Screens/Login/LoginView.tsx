@@ -3,6 +3,7 @@ import React from "react";
 
 import { Input } from "react-native-elements";
 import { ActivityIndicator } from "react-native-paper";
+import { string } from "yup/lib/locale";
 import {
   BottomButton,
   BottomScreen,
@@ -47,6 +48,7 @@ const LoginView = ({
           <BottomScreen>
             <LoginBox>
               <LabelLogin>Login</LabelLogin>
+
               <Input
                 placeholder="email@email.com"
                 leftIcon={{

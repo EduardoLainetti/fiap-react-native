@@ -12,8 +12,22 @@ export const StyledActivityIndicator = styled.ActivityIndicator`
   margin-top: 30px;
 `;
 
+export const ContainerItemName = styled.Text`
+  margin-left: 10px;
+  font-size: 18px;
+  width: 240px;
+`;
+
 export const ContainerItem = styled.TouchableHighlight`
+  margin-top: 10px;
   margin-bottom: 10px;
+  height: 180px;
+  background-color: ${colors.PrimaryLightest};
+  border-radius: 15px;
+  border-width: 1px;
+  border-color: ${colors.PrimaryLightest};
+  padding: 5px;
+  justify-content: center;
 `;
 
 export const TextNameStyle = styled.View`
@@ -28,17 +42,28 @@ export const TextsView = styled.View`
 `;
 
 export const TextTitle = styled.Text`
-  width: 280px;
+  width: 300px;
   font-size: 18px;
   align-self: flex-start;
 `;
 
 export const TextPrice = styled.Text`
+  margin-left: 10px;
   width: 100px;
   font-size: 18px;
+  color: ${colors.NeutralLight};
 `;
 
 export const IconFavorite = styled(Icon)`
   color: ${colors.PrimaryDark};
   margin-top: 2px;
+`;
+
+export const IconFavoriteInative = styled(Icon)`
+  color: ${colors.NeutralMedium};
+  margin-top: 2px;
+`;
+
+export const ContainerIconFavorite = styled.View`
+  width: 30px;
 `;

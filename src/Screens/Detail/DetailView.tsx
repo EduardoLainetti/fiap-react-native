@@ -5,10 +5,9 @@ import {
   TextName,
   TextTitle,
   TextDetail,
-  TextNoInfo,
-  StyledImage,
   StyledActivityIndicator,
   MainSafeAreaView,
+  ContainerFavorite,
 } from "./DetailStyles";
 import { IProductDetails } from "../../Interfaces/IProductDetails";
 import Colors from "../../Styles/Colors";
@@ -34,19 +33,21 @@ const DetailView = ({ dataConnection, toggleSwitch, isLoading }: iProps) => {
   } else {
     return (
       <MainSafeAreaView>
-        <ScrollView>
-          <TextName>{dataConnection?.name}</TextName>
-          <TextTitle>Preço</TextTitle>
-          <TextDetail>{dataConnection?.price}</TextDetail>
+        <TextName>{dataConnection?.name}</TextName>
+        <TextTitle>Preço</TextTitle>
+        <TextDetail>{dataConnection?.price?.toFixed(2)}</TextDetail>
+        <ContainerFavorite>
           <TextTitle>Favorito</TextTitle>
           <Switch
             trackColor={{ false: "#767577", true: "#81b0ff" }}
-            thumbColor={dataConnection?.favorite ? "#f5dd4b" : "#f4f3f4"}
+            thumbColor={
+              dataConnection?.favorite ? Colors.PrimaryDark : "#f4f3f4"
+            }
             ios_backgroundColor="#3e3e3e"
             onValueChange={toggleSwitch}
             value={dataConnection?.favorite}
           />
-        </ScrollView>
+        </ContainerFavorite>
       </MainSafeAreaView>
     );
   }
